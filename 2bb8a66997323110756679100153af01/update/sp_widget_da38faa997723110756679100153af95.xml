@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+	c.send = function(){
+		c.data.channelsend= $("#channelsend").val();
+		c.data.template = $("#templatesend").val();
+		c.data.action = "sendMessage";
+		
+		c.server.update().then(function(){
+			
+			c.data.action = undefined;
+			c.data.mobile= "";
+			c.data.channelsend= "";
+			c.data.template= "";
+			c.data.varone= "";
+			c.data.vartwo= "";
+			c.data.varthree= "";
+		})
+	}
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
+
+  form {
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+  }
+
+  h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+  }
+
+  select {
+    padding: 10px;
+    border-radius: 2px;
+  }
+
+  button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+
+  .number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+
+    form {
+      max-width: 480px;
+    }
+
+  }</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>mmc-app-widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>MMC-App-Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	
+	if(input.action == "sendMessage"){
+		console.log(input.varone)
+		console.log(input.vartwo)
+		console.log(input.varthree)
+		
+		var r = new sn_ws.RESTMessageV2('global.Notification-Widget', 'Notification');
+		
+ r.setStringParameterNoEscape('msg_template_id', input.template);
+ r.setStringParameterNoEscape('channel_id', input.channelsend);
+ r.setStringParameterNoEscape('recipient_phone_number', input.mobile);
+		
+ r.setStringParameterNoEscape('PlaceHolderValue1', input.varone);
+ r.setStringParameterNoEscape('PlaceHolderValue3', input.vartwo);
+ r.setStringParameterNoEscape('PlaceHolderValue2', input.varthree);
+		
+		if(input.template == '450'){
+			
+ r.setStringParameterNoEscape('PlaceHolderLabel1', '{{flightDate}}');
+ r.setStringParameterNoEscape('PlaceHolderLabel2', '{{flightTerminal}}'); 
+ r.setStringParameterNoEscape('PlaceHolderLabel3', '{{flightTime}}');
+ 
+		}		
+		
+		if(input.template == '449'){
+			
+ r.setStringParameterNoEscape('PlaceHolderLabel1', '{{deliveryDate}}');
+ r.setStringParameterNoEscape('PlaceHolderLabel2', '{{timeWindowStart}}'); 
+ r.setStringParameterNoEscape('PlaceHolderLabel3', '{{timeWindowEnd}}');
+ 
+		}		
+		
+		var response = r.execute();
+		 var responseBody = response.getBody();
+		 var httpStatus = response.getStatusCode();
+	
+		console.log(httpStatus)
+		console.log(response)
+		console.log(responseBody)
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-29 06:24:57</sys_created_on>
+        <sys_id>da38faa997723110756679100153af95</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>MMC-App-Widget</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_update_name>sp_widget_da38faa997723110756679100153af95</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-29 06:26:52</sys_updated_on>
+        <template><![CDATA[<form>
+        <h1> Messaging </h1>
+        
+        <fieldset>        
+          <label for="rc_identity">Recipient Channel Identity:</label>
+          <input type="text" id="rc_identity" ng-model="c.data.mobile" name="rc_identity">
+          
+           <label for="channelsend">Select Channel to Send On:</label>
+         <select 
+    ng-model="c.data.channelsend"
+   id="channelsend"
+    class="form-control">
+    					<option value="0">Select channel</option>
+             <option value="514ea4f8-0bee-40ea-8c6b-695e27ee02bf">+44 7457403737</option>
+  </select>
+          
+          
+           <label for="templatesend">Select Template to Send</label>
+          <select id="templatesend" name="templatesend" ng-model="c.data.template">         
+              <option value="449">449</option>    
+             <option value="450">450</option>  
+             <option value="451">451</option>  
+          </select>
+          
+           <label for="variable_1">Variable 1:</label>
+          <input type="text" id="variable_1" name="variable_1" ng-model="c.data.varone">
+          
+           <label for="variable_2">Variable 2:</label>
+          <input type="text" id="variable_2" name="variable_2" ng-model="c.data.vartwo">
+          
+           <label for="variable_3">Variable 3:</label>
+          <input type="text" id="variable_" name="variable_3" ng-model="c.data.varthree">
+          
+        </fieldset>
+        
+       <button  id="myButton" ng-click="c.send()" >Send Message</button>
+       
+       
+       
+       </form>]]></template>
+    </sp_widget>
+</record_update>
