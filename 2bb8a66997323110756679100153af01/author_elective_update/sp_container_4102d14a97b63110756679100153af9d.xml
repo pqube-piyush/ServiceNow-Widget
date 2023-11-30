@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>MMC_waba_widget - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="mmc_waba_widget">3802d14a97b63110756679100153af9a</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:15:22</sys_created_on>
+        <sys_id>4102d14a97b63110756679100153af9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MMC_waba_widget - Container 1</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_update_name>sp_container_4102d14a97b63110756679100153af9d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:15:22</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="MMC Widget">2bb8a66997323110756679100153af01</application>
+        <file_path/>
+        <instance_id>6caaba63db1f2450f37acac505961956</instance_id>
+        <instance_name>dev111142</instance_name>
+        <name>sp_container_4102d14a97b63110756679100153af9d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>MMC_waba_widget - Container 1</name><order>1</order><sp_page display_value="mmc_waba_widget">3802d14a97b63110756679100153af9a</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-11-30 12:15:22</sys_created_on><sys_id>4102d14a97b63110756679100153af9d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>MMC_waba_widget - Container 1</sys_name><sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package><sys_policy/><sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope><sys_update_name>sp_container_4102d14a97b63110756679100153af9d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-11-30 12:15:22</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>310002965</payload_hash>
+        <record_name>MMC_waba_widget - Container 1</record_name>
+        <reverted_from/>
+        <source>d2496e6997323110756679100153af36</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:15:22</sys_created_on>
+        <sys_id>cd02d14a97b63110756679100153af9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c2027b5200000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:15:22</sys_updated_on>
+        <type>Container</type>
+        <update_guid>0902d14a1cb63110b34bd732238e3c9e</update_guid>
+        <update_guid_history>0902d14a1cb63110b34bd732238e3c9e:310002965</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="MMC_waba_widget - Container 1">4ed2958a97b63110756679100153afeb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:18:59</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>00bd5606b05145988b5d9bc757c69590</sys_id>
+        <sys_metadata>4102d14a97b63110756679100153af9d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MMC_waba_widget - Container 1</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_scope_delete display_value="">18969c0bb5a94cd88f8599ec40788c90</sys_scope_delete>
+        <sys_update_name>sp_container_4102d14a97b63110756679100153af9d</sys_update_name>
+        <sys_update_version display_value="sp_container_4102d14a97b63110756679100153af9d">cd02d14a97b63110756679100153af9e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:18:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

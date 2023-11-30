@@ -165,37 +165,24 @@
 		
 		var r = new sn_ws.RESTMessageV2('global.Notification-Widget', 'Notification');
 		
- r.setStringParameterNoEscape('msg_template_id', input.template);
- r.setStringParameterNoEscape('channel_id', input.channelsend);
- r.setStringParameterNoEscape('recipient_phone_number', input.mobile);
+    r.setStringParameterNoEscape('msg_template_id', input.template);
+    r.setStringParameterNoEscape('channel_id', input.channelsend);
+    r.setStringParameterNoEscape('recipient_phone_number', input.mobile);
 		
- r.setStringParameterNoEscape('PlaceHolderValue1', input.varone);
- r.setStringParameterNoEscape('PlaceHolderValue3', input.vartwo);
- r.setStringParameterNoEscape('PlaceHolderValue2', input.varthree);
-		
-		if(input.template == '450'){
-			
- r.setStringParameterNoEscape('PlaceHolderLabel1', '{{flightDate}}');
- r.setStringParameterNoEscape('PlaceHolderLabel2', '{{flightTerminal}}'); 
- r.setStringParameterNoEscape('PlaceHolderLabel3', '{{flightTime}}');
- 
-		}		
-		
-		if(input.template == '449'){
-			
- r.setStringParameterNoEscape('PlaceHolderLabel1', '{{deliveryDate}}');
- r.setStringParameterNoEscape('PlaceHolderLabel2', '{{timeWindowStart}}'); 
- r.setStringParameterNoEscape('PlaceHolderLabel3', '{{timeWindowEnd}}');
- 
-		}		
-		
+    r.setStringParameterNoEscape('PlaceHolderValue1', '11th November 2023');
+    r.setStringParameterNoEscape('PlaceHolderValue3', '10:20 AM');
+    r.setStringParameterNoEscape('PlaceHolderValue2', 'Heathrow Terminal 20');
+		r.setStringParameterNoEscape('PlaceHolderLabel1', '{{flightDate}}');
+ 		r.setStringParameterNoEscape('PlaceHolderLabel2', '{{flightTerminal}}'); 
+	  r.setStringParameterNoEscape('PlaceHolderLabel3', '{{flightTime}}');
+		 
 		var response = r.execute();
-		 var responseBody = response.getBody();
-		 var httpStatus = response.getStatusCode();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
 	
-		console.log(httpStatus)
-		console.log(response)
-		console.log(responseBody)
+		 console.log(httpStatus)
+		 console.log(response)
+		 console.log(responseBody)
 	}
 })();]]></script>
         <servicenow>false</servicenow>
@@ -203,14 +190,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-11-29 06:24:57</sys_created_on>
         <sys_id>da38faa997723110756679100153af95</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>MMC-App-Widget</sys_name>
         <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
         <sys_policy/>
         <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
         <sys_update_name>sp_widget_da38faa997723110756679100153af95</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-29 06:26:52</sys_updated_on>
+        <sys_updated_on>2023-11-30 04:33:32</sys_updated_on>
         <template><![CDATA[<form>
         <h1> Messaging </h1>
         

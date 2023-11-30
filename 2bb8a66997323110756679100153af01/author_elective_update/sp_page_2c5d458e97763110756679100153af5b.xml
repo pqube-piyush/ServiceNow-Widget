@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="DELETE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>mmc_waba_widget</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>true</public>
+        <roles/>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 11:54:51</sys_created_on>
+        <sys_id>2c5d458e97763110756679100153af5b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>mmc_waba_widget</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_update_name>sp_page_2c5d458e97763110756679100153af5b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:10:18</sys_updated_on>
+        <title>MMC_waba_widget</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="DELETE" query="documentkey=2c5d458e97763110756679100153af5b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="MMC Widget">2bb8a66997323110756679100153af01</application>
+        <file_path/>
+        <instance_id>6caaba63db1f2450f37acac505961956</instance_id>
+        <instance_name>dev111142</instance_name>
+        <name>sp_page_2c5d458e97763110756679100153af5b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page"><sp_page action="INSERT_OR_UPDATE"><category>custom</category><css/><draft>false</draft><dynamic_title_structure/><id>mmc_waba_widget</id><internal>false</internal><omit_watcher>false</omit_watcher><public>true</public><roles/><seo_script/><short_description/><sys_class_name>sp_page</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-11-30 11:54:51</sys_created_on><sys_id>2c5d458e97763110756679100153af5b</sys_id><sys_mod_count>1</sys_mod_count><sys_name>mmc_waba_widget</sys_name><sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package><sys_policy/><sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope><sys_update_name>sp_page_2c5d458e97763110756679100153af5b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-11-30 12:10:18</sys_updated_on><title>MMC_waba_widget</title><use_seo_script>false</use_seo_script></sp_page><sys_translated_text action="delete_multiple" query="documentkey=2c5d458e97763110756679100153af5b"/></record_update>]]></payload>
+        <payload_hash>-1248951170</payload_hash>
+        <record_name>mmc_waba_widget</record_name>
+        <reverted_from/>
+        <source>d2496e6997323110756679100153af36</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:10:18</sys_created_on>
+        <sys_id>3ed099c697b63110756679100153afd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c202311d30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:10:18</sys_updated_on>
+        <type>Page</type>
+        <update_guid>36d099c61bb63110f1b481e367652bd5</update_guid>
+        <update_guid_history>36d099c61bb63110f1b481e367652bd5:-1248951170,645dc90631b631104e5e2338450709b0:1350833861</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="mmc_waba_widget">a671dd0a97b63110756679100153af2d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:13:00</sys_created_on>
+        <sys_db_object display_value="" name="sp_page">sp_page</sys_db_object>
+        <sys_id>cc1a56c9142f4c59bcf9d8fea0461b09</sys_id>
+        <sys_metadata>2c5d458e97763110756679100153af5b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>mmc_waba_widget</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_scope_delete display_value="">18969c0bb5a94cd88f8599ec40788c90</sys_scope_delete>
+        <sys_update_name>sp_page_2c5d458e97763110756679100153af5b</sys_update_name>
+        <sys_update_version display_value="sp_page_2c5d458e97763110756679100153af5b">3ed099c697b63110756679100153afd5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:13:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

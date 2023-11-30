@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">2aa52544cb11120000f8d856634c9c5d</sp_column>
+        <sp_widget display_value="Login">6506d341cb33020000f8d856634c9cdc</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:28:44</sys_created_on>
+        <sys_id>3015110e97b63110756679100153afff</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_update_name>sp_instance_3015110e97b63110756679100153afff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:28:58</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_panel": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"use_advanced": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=3015110e97b63110756679100153afff"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="MMC Widget">2bb8a66997323110756679100153af01</application>
+        <file_path/>
+        <instance_id>6caaba63db1f2450f37acac505961956</instance_id>
+        <instance_name>dev111142</instance_name>
+        <name>sp_instance_3015110e97b63110756679100153afff</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;2aa52544cb11120000f8d856634c9c5d&lt;/sp_column&gt;&lt;sp_widget display_value="Login"&gt;6506d341cb33020000f8d856634c9cdc&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-11-30 12:28:44&lt;/sys_created_on&gt;&lt;sys_id&gt;3015110e97b63110756679100153afff&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01"&gt;2bb8a66997323110756679100153af01&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="MMC Widget"&gt;2bb8a66997323110756679100153af01&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_3015110e97b63110756679100153afff&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-11-30 12:28:58&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"show_panel": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"use_advanced": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=3015110e97b63110756679100153afff"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>67884000</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>d2496e6997323110756679100153af36</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:28:58</sys_created_on>
+        <sys_id>9c25d10e97b63110756679100153afa0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c203428d50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:28:58</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>9425d10eb6b63110cb1d538066d235a0</update_guid>
+        <update_guid_history>9425d10eb6b63110cb1d538066d235a0:67884000,2215990e2fb6311001c7da40cc93d6db:716083969,7815510ee6b63110c20a9a3fb5ebcc00:285737696</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">6125d90e97b63110756679100153afa7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:29:04</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>007c6682a49a42a080cce17382d00d90</sys_id>
+        <sys_metadata>3015110e97b63110756679100153afff</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_scope_delete display_value="">18969c0bb5a94cd88f8599ec40788c90</sys_scope_delete>
+        <sys_update_name>sp_instance_3015110e97b63110756679100153afff</sys_update_name>
+        <sys_update_version display_value="sp_instance_3015110e97b63110756679100153afff">9c25d10e97b63110756679100153afa0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:29:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

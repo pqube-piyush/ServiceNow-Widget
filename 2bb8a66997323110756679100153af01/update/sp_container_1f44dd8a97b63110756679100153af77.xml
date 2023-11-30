@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>MMC_waba_widget - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="mmc_waba_widget">5b44dd8a97b63110756679100153af75</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-30 12:25:22</sys_created_on>
+        <sys_id>1f44dd8a97b63110756679100153af77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MMC_waba_widget - Container 1</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_update_name>sp_container_1f44dd8a97b63110756679100153af77</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-30 12:25:22</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>
