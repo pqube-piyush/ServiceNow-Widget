@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+	c.send = function(){
+		c.data.channelsend= $("#channelsend").val();
+		c.data.template = $("#templatesend").val();
+		c.data.action = "sendMessage";
+		
+		c.server.update().then(function(){
+			
+			c.data.action = undefined;
+			c.data.mobile= "";
+			c.data.channelsend= "";
+			c.data.template= "";
+			c.data.varone= "";
+			c.data.vartwo= "";
+			c.data.varthree= "";
+		})
+	}
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
+
+  form {
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+  }
+
+  h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+  }
+
+  select {
+    padding: 10px;
+    border-radius: 2px;
+  }
+
+  button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+
+  .number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+
+    form {
+      max-width: 480px;
+    }
+
+  }</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>mmc-notification-widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>MMC-Notification-Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	
+	if(input.action == "sendMessage"){
+		console.log(input.varone)
+		console.log(input.vartwo)
+		console.log(input.varthree)
+		
+		var r = new sn_ws.RESTMessageV2('global.Notification', 'MMCNotification');
+		
+    r.setStringParameterNoEscape('msg_template_id', input.template);
+    r.setStringParameterNoEscape('channel_id', input.channelsend);
+    r.setStringParameterNoEscape('recipient_phone_number', input.mobile);
+		
+    r.setStringParameterNoEscape('PlaceHolderValue1', '11th November 2023');
+    r.setStringParameterNoEscape('PlaceHolderValue3', '10:20 AM');
+    r.setStringParameterNoEscape('PlaceHolderValue2', 'Heathrow Terminal 20');
+		r.setStringParameterNoEscape('PlaceHolderLabel1', '{{flightDate}}');
+ 		r.setStringParameterNoEscape('PlaceHolderLabel2', '{{flightTerminal}}'); 
+	  r.setStringParameterNoEscape('PlaceHolderLabel3', '{{flightTime}}');
+		 
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+	
+		 console.log(httpStatus)
+		 console.log(response)
+		 console.log(responseBody)
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 11:08:05</sys_created_on>
+        <sys_id>553c0616973a7110756679100153afcc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>MMC-Notification-Widget</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_update_name>sp_widget_553c0616973a7110756679100153afcc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 11:09:35</sys_updated_on>
+        <template><![CDATA[<form>
+        <h1> Messaging </h1>
+        
+        <fieldset>        
+          <label for="rc_identity">Recipient Channel Identity:</label>
+          <input type="text" id="rc_identity" ng-model="c.data.mobile" name="rc_identity">
+          
+           <label for="channelsend">Select Channel to Send On:</label>
+         <select 
+    ng-model="c.data.channelsend"
+   id="channelsend"
+    class="form-control">
+    					<option value="0">Select channel</option>
+             <option value="514ea4f8-0bee-40ea-8c6b-695e27ee02bf">+44 7457403737</option>
+  </select>
+          
+          
+           <label for="templatesend">Select Template to Send</label>
+          <select id="templatesend" name="templatesend" ng-model="c.data.template">         
+              <option value="449">449</option>    
+             <option value="450">450</option>  
+             <option value="451">451</option>  
+          </select>
+          
+           <label for="variable_1">Variable 1:</label>
+          <input type="text" id="variable_1" name="variable_1" ng-model="c.data.varone">
+          
+           <label for="variable_2">Variable 2:</label>
+          <input type="text" id="variable_2" name="variable_2" ng-model="c.data.vartwo">
+          
+           <label for="variable_3">Variable 3:</label>
+          <input type="text" id="variable_" name="variable_3" ng-model="c.data.varthree">
+          
+        </fieldset>
+        
+       <button  id="myButton" ng-click="c.send()" >Send Message</button>
+       
+       
+       
+       </form>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="MMC Widget">2bb8a66997323110756679100153af01</application>
+        <file_path/>
+        <instance_id>6caaba63db1f2450f37acac505961956</instance_id>
+        <instance_name>dev111142</instance_name>
+        <name>sp_widget_553c0616973a7110756679100153afcc</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+	c.send = function(){
+		c.data.channelsend= $("#channelsend").val();
+		c.data.template = $("#templatesend").val();
+		c.data.action = "sendMessage";
+		
+		c.server.update().then(function(){
+			
+			c.data.action = undefined;
+			c.data.mobile= "";
+			c.data.channelsend= "";
+			c.data.template= "";
+			c.data.varone= "";
+			c.data.vartwo= "";
+			c.data.varthree= "";
+		})
+	}
+	
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #384047;
+  }
+
+  form {
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+  }
+
+  h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+  }
+
+  select {
+    padding: 10px;
+    border-radius: 2px;
+  }
+
+  button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+
+  .number {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+
+    form {
+      max-width: 480px;
+    }
+
+  }&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;mmc-notification-widget&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;MMC-Notification-Widget&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	
+	if(input.action == "sendMessage"){
+		console.log(input.varone)
+		console.log(input.vartwo)
+		console.log(input.varthree)
+		
+		var r = new sn_ws.RESTMessageV2('global.Notification', 'MMCNotification');
+		
+    r.setStringParameterNoEscape('msg_template_id', input.template);
+    r.setStringParameterNoEscape('channel_id', input.channelsend);
+    r.setStringParameterNoEscape('recipient_phone_number', input.mobile);
+		
+    r.setStringParameterNoEscape('PlaceHolderValue1', '11th November 2023');
+    r.setStringParameterNoEscape('PlaceHolderValue3', '10:20 AM');
+    r.setStringParameterNoEscape('PlaceHolderValue2', 'Heathrow Terminal 20');
+		r.setStringParameterNoEscape('PlaceHolderLabel1', '{{flightDate}}');
+ 		r.setStringParameterNoEscape('PlaceHolderLabel2', '{{flightTerminal}}'); 
+	  r.setStringParameterNoEscape('PlaceHolderLabel3', '{{flightTime}}');
+		 
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+	
+		 console.log(httpStatus)
+		 console.log(response)
+		 console.log(responseBody)
+	}
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-12-01 11:08:05&lt;/sys_created_on&gt;&lt;sys_id&gt;553c0616973a7110756679100153afcc&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;MMC-Notification-Widget&lt;/sys_name&gt;&lt;sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01"&gt;2bb8a66997323110756679100153af01&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="MMC Widget"&gt;2bb8a66997323110756679100153af01&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_553c0616973a7110756679100153afcc&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-12-01 11:09:35&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;form&gt;
+        &lt;h1&gt; Messaging &lt;/h1&gt;
+        
+        &lt;fieldset&gt;        
+          &lt;label for="rc_identity"&gt;Recipient Channel Identity:&lt;/label&gt;
+          &lt;input type="text" id="rc_identity" ng-model="c.data.mobile" name="rc_identity"&gt;
+          
+           &lt;label for="channelsend"&gt;Select Channel to Send On:&lt;/label&gt;
+         &lt;select 
+    ng-model="c.data.channelsend"
+   id="channelsend"
+    class="form-control"&gt;
+    					&lt;option value="0"&gt;Select channel&lt;/option&gt;
+             &lt;option value="514ea4f8-0bee-40ea-8c6b-695e27ee02bf"&gt;+44 7457403737&lt;/option&gt;
+  &lt;/select&gt;
+          
+          
+           &lt;label for="templatesend"&gt;Select Template to Send&lt;/label&gt;
+          &lt;select id="templatesend" name="templatesend" ng-model="c.data.template"&gt;         
+              &lt;option value="449"&gt;449&lt;/option&gt;    
+             &lt;option value="450"&gt;450&lt;/option&gt;  
+             &lt;option value="451"&gt;451&lt;/option&gt;  
+          &lt;/select&gt;
+          
+           &lt;label for="variable_1"&gt;Variable 1:&lt;/label&gt;
+          &lt;input type="text" id="variable_1" name="variable_1" ng-model="c.data.varone"&gt;
+          
+           &lt;label for="variable_2"&gt;Variable 2:&lt;/label&gt;
+          &lt;input type="text" id="variable_2" name="variable_2" ng-model="c.data.vartwo"&gt;
+          
+           &lt;label for="variable_3"&gt;Variable 3:&lt;/label&gt;
+          &lt;input type="text" id="variable_" name="variable_3" ng-model="c.data.varthree"&gt;
+          
+        &lt;/fieldset&gt;
+        
+       &lt;button  id="myButton" ng-click="c.send()" &gt;Send Message&lt;/button&gt;
+       
+       
+       
+       &lt;/form&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>669013963</payload_hash>
+        <record_name>MMC-Notification-Widget</record_name>
+        <reverted_from/>
+        <source>d2496e6997323110756679100153af36</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 11:09:35</sys_created_on>
+        <sys_id>9b8c8e16973a7110756679100153afff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c2511d8fe0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 11:09:35</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>938c8e165f3a71109e661d8d72b460ff</update_guid>
+        <update_guid_history>938c8e165f3a71109e661d8d72b460ff:669013963,fd5c82d2c13a71104b18b5078940e3a5:10637034,5d3c06164d3a71108bc7baf33ca7cecd:-968529364</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="MMC-Notification-Widget">5e0d4a56973a7110756679100153af0d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 11:11:43</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>3e25f70a694245b1910795708f2b6c21</sys_id>
+        <sys_metadata>553c0616973a7110756679100153afcc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MMC-Notification-Widget</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_scope_delete display_value="">18969c0bb5a94cd88f8599ec40788c90</sys_scope_delete>
+        <sys_update_name>sp_widget_553c0616973a7110756679100153afcc</sys_update_name>
+        <sys_update_version display_value="sp_widget_553c0616973a7110756679100153afcc">9b8c8e16973a7110756679100153afff</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 11:11:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

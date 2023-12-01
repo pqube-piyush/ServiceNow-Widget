@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity">
+    <oauth_entity action="DELETE">
+        <access>public</access>
+        <access_token_lifespan>1800</access_token_lifespan>
+        <active>true</active>
+        <auth_code_lifespan>0</auth_code_lifespan>
+        <auth_url>https://login.payemoji.com/login.payemoji.com/oauth2/v2.0/token?p=b2c_1_login</auth_url>
+        <certificate_url/>
+        <client_id>59bf91c9-dc66-4e24-95ed-f29ee4e53d95</client_id>
+        <client_secret>﷞﷟﷒8d4f096a97e23110756679100153afbc﷬﷔1﷬﷭KfyT8witxKmB1DMGitTekg==raeKGtNoPNrKKoHvyIJwczqZrzbMxRRLcCC9su48lw0QDsi0789HXEA0PNV_1Wmossu1-5bM5ms=﷮﷯</client_secret>
+        <client_uuid>5c4c7d9297f67110756679100153afdf</client_uuid>
+        <code_challenge_method>S256</code_challenge_method>
+        <comments/>
+        <default_grant_type>client_credentials</default_grant_type>
+        <id_token_lifespan>0</id_token_lifespan>
+        <logo_url/>
+        <message_signature_lifespan>0</message_signature_lifespan>
+        <name>MMC Notification</name>
+        <oauth_api_script/>
+        <protocol_name/>
+        <public_client>false</public_client>
+        <redirect_url>https://dev111142.service-now.com/oauth_redirect.do</redirect_url>
+        <refresh_token_lifespan>8640000</refresh_token_lifespan>
+        <refresh_token_url/>
+        <restricted_binding>false</restricted_binding>
+        <revoke_token_url>https://login.payemoji.com/login.payemoji.com/oauth2/v2.0/token?p=b2c_1_login</revoke_token_url>
+        <salt>0</salt>
+        <send_client_credentials_as>request_body_parameter</send_client_credentials_as>
+        <skip_authorize>false</skip_authorize>
+        <sys_class_name>oauth_entity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 09:59:28</sys_created_on>
+        <sys_id>dc4c7d9297f67110756679100153afdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MMC Notification</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_update_name>oauth_entity_dc4c7d9297f67110756679100153afdf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 09:59:28</sys_updated_on>
+        <token_url>https://login.payemoji.com/login.payemoji.com/oauth2/v2.0/token?p=b2c_1_login</token_url>
+        <type>oauth_provider</type>
+        <use_mutual_auth>false</use_mutual_auth>
+        <user/>
+    </oauth_entity>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="MMC Widget">2bb8a66997323110756679100153af01</application>
+        <file_path/>
+        <instance_id>6caaba63db1f2450f37acac505961956</instance_id>
+        <instance_name>dev111142</instance_name>
+        <name>oauth_entity_dc4c7d9297f67110756679100153afdf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity"><oauth_entity action="INSERT_OR_UPDATE"><access>public</access><access_token_lifespan>1800</access_token_lifespan><active>true</active><auth_code_lifespan>0</auth_code_lifespan><auth_url>https://login.payemoji.com/login.payemoji.com/oauth2/v2.0/token?p=b2c_1_login</auth_url><certificate_url/><client_id>59bf91c9-dc66-4e24-95ed-f29ee4e53d95</client_id><client_secret>﷞﷟﷒8d4f096a97e23110756679100153afbc﷬﷔1﷬﷭KfyT8witxKmB1DMGitTekg==raeKGtNoPNrKKoHvyIJwczqZrzbMxRRLcCC9su48lw0QDsi0789HXEA0PNV_1Wmossu1-5bM5ms=﷮﷯</client_secret><client_uuid>5c4c7d9297f67110756679100153afdf</client_uuid><code_challenge_method>S256</code_challenge_method><comments/><default_grant_type>client_credentials</default_grant_type><id_token_lifespan>0</id_token_lifespan><logo_url/><message_signature_lifespan>0</message_signature_lifespan><name>MMC Notification</name><oauth_api_script/><protocol_name/><public_client>false</public_client><redirect_url>https://dev111142.service-now.com/oauth_redirect.do</redirect_url><refresh_token_lifespan>8640000</refresh_token_lifespan><refresh_token_url/><restricted_binding>false</restricted_binding><revoke_token_url>https://login.payemoji.com/login.payemoji.com/oauth2/v2.0/token?p=b2c_1_login</revoke_token_url><salt>0</salt><send_client_credentials_as>request_body_parameter</send_client_credentials_as><skip_authorize>false</skip_authorize><sys_class_name>oauth_entity</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-12-01 09:59:28</sys_created_on><sys_id>dc4c7d9297f67110756679100153afdf</sys_id><sys_mod_count>0</sys_mod_count><sys_name>MMC Notification</sys_name><sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package><sys_policy/><sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope><sys_update_name>oauth_entity_dc4c7d9297f67110756679100153afdf</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-12-01 09:59:28</sys_updated_on><token_url>https://login.payemoji.com/login.payemoji.com/oauth2/v2.0/token?p=b2c_1_login</token_url><type>oauth_provider</type><use_mutual_auth>false</use_mutual_auth><user/></oauth_entity></record_update>]]></payload>
+        <payload_hash>1463206368</payload_hash>
+        <record_name>MMC Notification</record_name>
+        <reverted_from/>
+        <source>d2496e6997323110756679100153af36</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 09:59:28</sys_created_on>
+        <sys_id>0c8c75d297f67110756679100153af58</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c24d1a6e60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 09:59:28</sys_updated_on>
+        <type>Application Registries</type>
+        <update_guid>448c75d2c4f671101073ddc1d921ba58</update_guid>
+        <update_guid_history>448c75d2c4f671101073ddc1d921ba58:1463206368</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="MMC Notification">482fbd5697f67110756679100153aff3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 10:10:56</sys_created_on>
+        <sys_db_object display_value="" name="oauth_entity">oauth_entity</sys_db_object>
+        <sys_id>264cafcdd0fe485688bf9bc99d3604a4</sys_id>
+        <sys_metadata>dc4c7d9297f67110756679100153afdf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MMC Notification</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_scope_delete display_value="">18969c0bb5a94cd88f8599ec40788c90</sys_scope_delete>
+        <sys_update_name>oauth_entity_dc4c7d9297f67110756679100153afdf</sys_update_name>
+        <sys_update_version display_value="oauth_entity_dc4c7d9297f67110756679100153afdf">0c8c75d297f67110756679100153af58</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 10:10:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

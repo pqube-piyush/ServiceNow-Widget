@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile">
+    <oauth_entity_profile action="DELETE">
+        <default>true</default>
+        <grant_type>client_credentials</grant_type>
+        <jwt_provider/>
+        <name>MMC Notification default_profile</name>
+        <oauth_entity display_value="MMC Notification">dc4c7d9297f67110756679100153afdf</oauth_entity>
+        <saml2_assertion_producer/>
+        <sys_class_name>oauth_entity_profile</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 09:59:28</sys_created_on>
+        <sys_id>848cf59297f67110756679100153af0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MMC Notification default_profile</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_update_name>oauth_entity_profile_848cf59297f67110756679100153af0c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 09:59:28</sys_updated_on>
+    </oauth_entity_profile>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="MMC Widget">2bb8a66997323110756679100153af01</application>
+        <file_path/>
+        <instance_id>6caaba63db1f2450f37acac505961956</instance_id>
+        <instance_name>dev111142</instance_name>
+        <name>oauth_entity_profile_848cf59297f67110756679100153af0c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile"><oauth_entity_profile action="INSERT_OR_UPDATE"><default>true</default><grant_type>client_credentials</grant_type><jwt_provider/><name>MMC Notification default_profile</name><oauth_entity display_value="MMC Notification">dc4c7d9297f67110756679100153afdf</oauth_entity><saml2_assertion_producer/><sys_class_name>oauth_entity_profile</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-12-01 09:59:28</sys_created_on><sys_id>848cf59297f67110756679100153af0c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>MMC Notification default_profile</sys_name><sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package><sys_policy/><sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope><sys_update_name>oauth_entity_profile_848cf59297f67110756679100153af0c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-12-01 09:59:28</sys_updated_on></oauth_entity_profile></record_update>]]></payload>
+        <payload_hash>-1641906627</payload_hash>
+        <record_name>MMC Notification default_profile</record_name>
+        <reverted_from/>
+        <source>d2496e6997323110756679100153af36</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 09:59:28</sys_created_on>
+        <sys_id>848c75d297f67110756679100153af57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18c24d1a6d60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 09:59:28</sys_updated_on>
+        <type>OAuth Entity Profile</type>
+        <update_guid>cc8c75d29bf67110a595246248e16a56</update_guid>
+        <update_guid_history>cc8c75d29bf67110a595246248e16a56:-1641906627</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="MMC Notification default_profile">482fbd5697f67110756679100153aff0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-12-01 10:10:56</sys_created_on>
+        <sys_db_object display_value="" name="oauth_entity_profile">oauth_entity_profile</sys_db_object>
+        <sys_id>56af462ea6b84279b7891adfef0ee149</sys_id>
+        <sys_metadata>848cf59297f67110756679100153af0c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MMC Notification default_profile</sys_name>
+        <sys_package display_value="MMC Widget" source="2bb8a66997323110756679100153af01">2bb8a66997323110756679100153af01</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="MMC Widget">2bb8a66997323110756679100153af01</sys_scope>
+        <sys_scope_delete display_value="">18969c0bb5a94cd88f8599ec40788c90</sys_scope_delete>
+        <sys_update_name>oauth_entity_profile_848cf59297f67110756679100153af0c</sys_update_name>
+        <sys_update_version display_value="oauth_entity_profile_848cf59297f67110756679100153af0c">848c75d297f67110756679100153af57</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-12-01 10:10:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
